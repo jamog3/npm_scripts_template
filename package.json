@@ -2,15 +2,32 @@
   "name": "project-name",
   "version": "1.0.0",
   "private": true,
+  "config": {
+    "src": {
+      "root": "src/",
+      "html": "src/html/",
+      "css": "src/stylesheets/",
+      "img": "src/images/",
+      "js": "src/javascripts/",
+      "copy": "src/copy/"
+    },
+    "dist": {
+      "root": ".temp/",
+      "html": ".temp/",
+      "css": ".temp/assets/stylesheets/",
+      "img": ".temp/assets/images/",
+      "js": ".temp/assets/javascripts/"
+    }
+  },
   "scripts": {
     "start": "rimraf ./.temp && npm run watch",
     "build": "rimraf ./build && gulp build",
     "watch": "npm-run-all --parallel watch:*",
-    "watch:html": "pug src/html/[!_]*.pug --basedir src/html/ --obj \"{\"rootPath\": \"/src/\"}\" --watch --pretty --out .temp/",
-    "watch:css": "nodemon --ext sass --watch src/stylesheets/ --exec 'npm-run-all --sequential css-sass css-postcss'",
-    "css-sass": "sass --load-path=node_modules --style expanded src/stylesheets/:.temp/assets/stylesheets/",
-    "css-postcss": "postcss --config postcss.config.js --replace .temp/assets/stylesheets/*.css",
-    "watch:server": "browser-sync start --server .temp/ --files=.temp/**/*.* --startPath /"
+    "watch:html": "cross-var pug $npm_package_config_src_html[!_]*.pug --basedir src/html/ --obj \"{\"rootPath\": \"/src/\"}\" --watch --pretty --out $npm_package_config_dist_html",
+    "watch:css": "cross-var nodemon --ext sass --watch src$npm_package_config_src_css --exec 'npm-run-all --sequential css-sass css-postcss'",
+    "css-sass": "cross-var sass --load-path=node_modules --style expanded $npm_package_config_src_css:$npm_package_config_dist_css",
+    "css-postcss": "cross-var postcss --config postcss.config.js --replace $npm_package_config_dist_css*.css",
+    "watch:server": "cross-var browser-sync start --server $npm_package_config_dist_root --files=$npm_package_config_dist_root**/*.* --startPath /"
   },
   "dependencies": {
     "bootstrap": "^4.1.3"
@@ -18,6 +35,7 @@
   "devDependencies": {
     "autoprefixer": "^9.1.0",
     "browser-sync": "^2.24.6",
+    "cross-var": "^1.1.0",
     "css-mqpacker": "^7.0.0",
     "nodemon": "^1.18.3",
     "npm-run-all": "^4.1.3",
