@@ -1,0 +1,9 @@
+include /_templates/_path
+
+p #{filePath}
+p #{depth}
+
+if filePath === "/"
+  h1 TOP
+else
+  p 下層
