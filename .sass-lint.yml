@@ -91,7 +91,7 @@ rules:
     - 1
     - convention: hyphenatedlowercase
   property-sort-order:
-    - 1
+    - 0
     - order:
       - font
       - font-family
