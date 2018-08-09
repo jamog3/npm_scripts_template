@@ -1,6 +1,9 @@
 options:
   formatter: stylish
   merge-default-rules: false
+files:
+    ignore:
+    - 'src/stylesheets/_partial/_sprite.sass'
 rules:
   bem-depth:
     - 2
