@@ -31,9 +31,11 @@
     "build": "rimraf $npm_package_config_build_root && npm-run-all --parallel build:*",
     "css-lint": "cross-var sass-lint --config .sass-lint.yml $npm_package_config_src_css'**/*.sass' --verbose --no-exit",
     "css-sass": "cross-var node-sass --include-path=node_modules --output-style expanded --source-map true --source-map-contents true --importer node_modules/node-sass-globbing/index.js $npm_package_config_src_css --output $npm_package_config_dist_css",
+    "css-sass-build": "cross-var node-sass --include-path=node_modules --output-style expanded --importer node_modules/node-sass-globbing/index.js $npm_package_config_src_css --output $npm_package_config_build_css",
     "css-postcss": "cross-var postcss --config postcss.config.js --replace $npm_package_config_dist_css'*.css'",
     "html-lint": "cross-var pug-lint --config .pug-lintrc $npm_package_config_src_html",
     "html-pug": "cross-var pug $npm_package_config_src_html[!_]*.pug --basedir $npm_package_config_src_html --obj \"{'rootPath': '/src/'}\" --pretty --out $npm_package_config_dist_html",
+    "html-pug-build": "cross-var pug $npm_package_config_src_html[!_]*.pug --basedir $npm_package_config_src_html --obj \"{'rootPath': '/src/'}\" --pretty --out $npm_package_config_build_html",
     "js-lint": "cross-var eslint $npm_package_config_src_js",
     "js-rollup": "rollup --config",
     "sprite": "spritesmith",
@@ -41,7 +43,9 @@
     "watch:css": "cross-var nodemon --ext sass --watch $npm_package_config_src_css --exec 'npm-run-all --parallel css-sass css-lint --sequential css-postcss'",
     "watch:js": "cross-var nodemon --ext js --watch $npm_package_config_src_js --exec 'npm-run-all --parallel js-rollup js-lint'",
     "watch:html": "cross-var nodemon --ext pug --watch $npm_package_config_src_html --exec 'npm-run-all --parallel html-pug html-lint'",
-    "watch:server": "cross-var browser-sync start --server $npm_package_config_dist_root --files=$npm_package_config_dist_root'**/*.*' --startPath /"
+    "watch:server": "cross-var browser-sync start --server $npm_package_config_dist_root --files=$npm_package_config_dist_root'**/*.*' --startPath /",
+    "build:css": "npm-run-all --parallel css-sass-build css-lint --sequential css-postcss",
+    "build:html": "npm-run-all --parallel html-pug-build html-lint"
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
