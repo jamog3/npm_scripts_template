@@ -15,3 +15,5 @@ export const smoothScroll = (y = 0) => {
     $('html, body').animate(animateParam, speed, easing);
   });
 };
+
+export default smoothScroll;
