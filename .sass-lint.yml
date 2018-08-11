@@ -3,7 +3,7 @@ options:
   merge-default-rules: false
 files:
     ignore:
-    - 'src/stylesheets/_partial/_sprite.sass'
+    - 'src/stylesheets/_partial/_sprites.sass'
 rules:
   bem-depth:
     - 2
