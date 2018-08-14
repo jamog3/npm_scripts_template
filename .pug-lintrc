@@ -9,7 +9,6 @@
   ],
   "disallowSpecificTags": [
     "hgroup",
-    "i",
     "s",
     "u"
   ],

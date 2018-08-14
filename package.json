@@ -9,6 +9,7 @@
       "css": "src/stylesheets/",
       "img": "src/images/",
       "js": "src/javascripts/",
+      "iconfont": "src/iconfonts/",
       "copy": "src/copy/"
     },
     "dist": {
@@ -39,6 +40,7 @@
     "html-lint": "cross-var pug-lint --config .pug-lintrc $npm_package_config_src_html",
     "html-pug": "cross-var pug $npm_package_config_src_html[!_]*.pug --basedir $npm_package_config_src_html --obj \"{'rootPath': '/src/'}\" --pretty --out $npm_package_config_dist_html",
     "html-pug-build": "cross-var pug $npm_package_config_src_html[!_]*.pug --basedir $npm_package_config_src_html --obj \"{'rootPath': '/src/'}\" --pretty --out $npm_package_config_build_html",
+    "iconfont": "cross-var icon-font-generator $npm_package_config_src_iconfont'_icons/*.svg' --out $npm_package_config_src_copy'assets/fonts/' --fontspath '../fonts/' --csspath $npm_package_config_src_css'_partial/_iconfonts.scss' --csstp $npm_package_config_src_iconfont'_templates/_css.hbs' --htmlpath $npm_package_config_src_iconfont'list.html' --htmltp $npm_package_config_src_iconfont'_templates/_html.hbs' --types 'ttf,woff,woff2,eot' --json false --height 1000",
     "img-min": "cross-var imagemin $npm_package_config_src_img'*' --out-dir=$npm_package_config_dist_img",
     "img-min-build": "cross-var imagemin $npm_package_config_src_img'*' --out-dir=$npm_package_config_build_img",
     "js-lint": "cross-var eslint $npm_package_config_src_js",
@@ -77,6 +79,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
+    "icon-font-generator": "^2.1.8",
     "imagemin-cli": "^3.0.0",
     "node-sass": "^4.9.2",
     "node-sass-globbing": "^0.0.23",

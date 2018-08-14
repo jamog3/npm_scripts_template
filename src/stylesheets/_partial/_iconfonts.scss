@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "icons";
+    src: url("../fonts/icons.eot?bc1f76a3cc61d056ac2a782cfe9bdb03?#iefix") format("embedded-opentype"),
+url("../fonts/icons.woff2?bc1f76a3cc61d056ac2a782cfe9bdb03") format("woff2"),
+url("../fonts/icons.woff?bc1f76a3cc61d056ac2a782cfe9bdb03") format("woff"),
+url("../fonts/icons.ttf?bc1f76a3cc61d056ac2a782cfe9bdb03") format("truetype");
+}
+
+i {
+    line-height: 1;
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-si-glyph-anchor:before {
+    content: "\f101";
+}
+.icon-si-glyph-android:before {
+    content: "\f102";
+}
+.icon-si-glyph-angle:before {
+    content: "\f103";
+}
+
+@mixin iconfont($icon-si-glyph-anchor) {
+    content: "\f101";
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.05;
+    text-indent: 0;
+    text-align: center;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@mixin iconfont($icon-si-glyph-android) {
+    content: "\f102";
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.05;
+    text-indent: 0;
+    text-align: center;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@mixin iconfont($icon-si-glyph-angle) {
+    content: "\f103";
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.05;
+    text-indent: 0;
+    text-align: center;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
