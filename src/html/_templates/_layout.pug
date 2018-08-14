@@ -11,6 +11,7 @@ block vars
 - site.keywords    = "keyword"
 - site.description = "description"
 - site.url         = "http://hoge.com"
+- var dateNow = Date.now();
 
 if !page.keywords
   - page.keywords    = site.keywords
@@ -60,7 +61,7 @@ html(lang="ja")
     meta(property="twitter:account_id", content="00000000000")
 
     link(rel="canonical", href=`${site.url}${filePath}`)
-    link(rel="stylesheet", href=`${depth}assets/stylesheets/style.css`)
+    link(rel="stylesheet", href=`${depth}assets/stylesheets/style.css?${dateNow}`)
     link(rel="icon", type="image/png", href="/favicon.png", sizes="32x32")
 
   body
@@ -70,4 +71,4 @@ html(lang="ja")
 
       block content
 
-    script(src=`${depth}assets/javascripts/common.js`)
+    script(src=`${depth}assets/javascripts/common.js?${dateNow}`)
