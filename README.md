@@ -7,11 +7,12 @@
 ## npmパッケージをインストール
 
 ```
-#プロジェクトのディレクトリに移動して
 $ yarn install
 ```
 
 ## ファイルの監視
+
+`/.temp/` に一時ファイルが作成され、ブラウザが立ち上がる
 
 ```
 $ yarn start
@@ -52,7 +53,7 @@ $ yarn run iconfont
 
 ## 納品ファイル生成
 
-cssのminifyや、.mapなどを省いたファイルを生成
+`/build/` にcssのminifyや、.mapなどを省いたファイルを生成
 
 ```
 $ yarn run build
@@ -60,11 +61,11 @@ $ yarn run build
 
 ## ディレクトリ構成
 
-srcを編集。
+srcを編集
 
-+ pug -> html
++ pug  -> html
 + sass -> css
-+ es6 -> js
++ es6  -> js
 
 ```
 ├── .temp/（ビルド後のソース）
@@ -74,10 +75,12 @@ srcを編集。
 │   │    └── stylesheets 等
 │   └── index.html
 │
+├── build/（納品ファイルがここに生成される）
+│
+├── config/（ルートパスに置かなくてもよい設定ファイル群）
+│
 ├── node_modules/
 │   └── パッケージ各種
-│
-├── build/（納品ファイルがここに生成される）
 │
 ├── src/（ビルド前のソース）
 │   ├── copy/（複製するだけのファイル用）
