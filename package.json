@@ -90,11 +90,12 @@
     "pug-cli": "^1.0.0-alpha6",
     "pug-lint": "^2.5.0",
     "rimraf": "^2.6.2",
-    "rollup": "^0.64.1",
+    "rollup": "^0.66.6",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.5",
     "rollup-plugin-multi-entry": "^2.0.2",
     "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^6.0.0",
     "sass-lint": "^1.12.1",
     "spritesmith-cli": "^1.1.2"
   }
