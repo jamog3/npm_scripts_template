@@ -1,0 +1,18 @@
+@charset 'utf-8';
+
+@use 'bootstrap-reboot';
+
+@use 'common';
+@use 'components';
+
+@use 'common/variables/mixin';
+@use 'common/variables/size';
+
+.hoge {
+  @include mixin.hover;
+  display: block;
+  background: #00f;
+  @media screen and (max-width: size.$sp-width) {
+    display: grid;
+  }
+}
