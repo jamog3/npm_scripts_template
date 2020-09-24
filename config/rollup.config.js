@@ -1,20 +1,27 @@
-import babel from 'rollup-plugin-babel';
-import babelrc from 'babelrc-rollup';
-import commonjs from 'rollup-plugin-commonjs';
-import resolve from 'rollup-plugin-node-resolve';
+import commonjs from "rollup-plugin-commonjs";
+import resolve from "rollup-plugin-node-resolve";
+import typescript from "rollup-plugin-typescript2";
 
-module.exports = {
-  input: 'src/javascripts/common.js',
+export default {
+  input: "src/javascripts/common.ts",
   output: {
-    file: '.temp/assets/javascripts/common.js',
-    format: 'iife',
-    sourcemap: true
+    dir: ".temp/assets/javascripts/",
+    format: "iife",
+    entryFileNames: "[name].js",
+    sourcemap: true,
   },
   plugins: [
-    babel(babelrc()),
-    resolve(),
     commonjs({
-      include: 'node_modules/**'
-    })
-  ]
-}
+      include: "node_modules/**",
+    }),
+    resolve(),
+    typescript({
+      tsconfigOverride: {
+        compilerOptions: {
+          module: "es2015",
+          moduleResolution: "node",
+        },
+      },
+    }),
+  ],
+};

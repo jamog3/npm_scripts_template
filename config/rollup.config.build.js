@@ -1,27 +1,29 @@
-import babel from 'rollup-plugin-babel';
-import babelrc from 'babelrc-rollup';
-import commonjs from 'rollup-plugin-commonjs';
-import { uglify } from 'rollup-plugin-uglify';
-import resolve from 'rollup-plugin-node-resolve';
+import commonjs from "rollup-plugin-commonjs";
+import resolve from "rollup-plugin-node-resolve";
+import typescript from "rollup-plugin-typescript2";
+import { terser } from "rollup-plugin-terser";
 
-module.exports = {
-  input: 'src/javascripts/common.js',
+export default {
+  input: "src/javascripts/common.ts",
   output: {
-    file: 'build/assets/javascripts/common.js',
-    format: 'iife',
-    sourcemap: false
+    dir: "build/assets/javascripts/",
+    format: "iife",
+    entryFileNames: "[name].js",
+    sourcemap: false,
+    plugins: [terser()],
   },
   plugins: [
-    babel(babelrc()),
-    resolve(),
     commonjs({
-      include: 'node_modules/**'
+      include: "node_modules/**",
     }),
-    uglify({
-      output: {
-        // /*! で始まる License Comment を残す
-        comments: /^!/
-      }
-    })
-  ]
+    resolve(),
+    typescript({
+      tsconfigOverride: {
+        compilerOptions: {
+          module: "es2015",
+          moduleResolution: "node",
+        },
+      },
+    }),
+  ],
 };

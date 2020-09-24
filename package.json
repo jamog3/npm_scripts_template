@@ -57,7 +57,8 @@
     "watch:css": "cross-var watch 'npm-run-all --parallel css-scss css-lint --sequential css-postcss' $npm_package_config_src_css",
     "watch:html": "cross-var watch 'npm-run-all --parallel html-pug html-lint' $npm_package_config_src_html",
     "watch:img": "cross-var watch 'npm-run-all img-min' $npm_package_config_src_img",
-    "watch:js": "cross-var watch 'npm-run-all --parallel js-rollup js-lint' $npm_package_config_src_js",
+    "watch:js": "cross-var watch 'npm-run-all --parallel js-rollup' $npm_package_config_src_js",
+    "atch:js": "cross-var watch 'npm-run-all --parallel js-rollup js-lint' $npm_package_config_src_js",
     "watch:server": "cross-var browser-sync start --server $npm_package_config_dist_root --files=$npm_package_config_dist_html'**/*.html',$npm_package_config_dist_css'**/*.css',$npm_package_config_dist_js'**/*.js' --startPath /",
     "build:copy": "npm-run-all copy-build",
     "build:css": "npm-run-all --parallel css-scss-build css-lint --sequential css-postcss-build",
@@ -67,14 +68,12 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
-    "jquery": "^3.3.1"
+    "smooth-scroll": "^16.1.3"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^6.0.0",
+    "@types/smooth-scroll": "^16.1.0",
     "autoprefixer": "9.8.6",
-    "babel-core": "^6.26.3",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.7.0",
-    "babelrc-rollup": "^3.0.0",
     "browser-sync": "^2.24.6",
     "cpx": "^1.5.0",
     "cross-var": "^1.1.0",
@@ -93,13 +92,14 @@
     "pug-lint": "^2.5.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.28.1",
-    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-multi-entry": "^2.0.2",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-uglify": "^6.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.27.2",
     "sass": "^1.26.11",
     "spritesmith-cli": "^1.1.2",
+    "typescript": "^4.0.3",
     "watch": "^1.0.2"
   }
 }
