@@ -1,8 +1,9 @@
 .sample {
   display: block;
   &__body {
-    padding: 100px;
     background: #aac;
+    display: flex;
     font-size: 10px;
+    padding: 100px;
   }
 }

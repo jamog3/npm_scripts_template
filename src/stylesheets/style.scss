@@ -10,8 +10,9 @@
 
 .hoge {
   @include mixin.hover;
-  display: block;
+
   background: #00f;
+  display: block;
   @media screen and (max-width: size.$sp-width) {
     display: grid;
   }

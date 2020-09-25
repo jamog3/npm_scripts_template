@@ -2,13 +2,13 @@
 
 @mixin no-text {
   overflow: hidden;
-  white-space: nowrap;
   text-indent: 100%;
+  white-space: nowrap;
 }
 
 @mixin hover {
-  transition: opacity .2s animation.$md-motion;
   opacity: 1;
+  transition: opacity .2s animation.$md-motion;
   &:hover {
     cursor: pointer;
     opacity: .5;
@@ -17,6 +17,6 @@
 
 @mixin ellipsis {
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }

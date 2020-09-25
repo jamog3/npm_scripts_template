@@ -5,9 +5,9 @@
 @use 'common/variables/font';
 
 body {
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: 'tnum';
   font-family: font.$base-font-family;
-  line-height: 1.4;
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums;
   letter-spacing: font.$letter-spacing;
+  line-height: 1.4;
 }
