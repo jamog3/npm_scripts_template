@@ -22,4 +22,6 @@
 
 .hoge3 {
   @include sprites.sprite(sprites.$sample2);
+
+  color: #ddd;
 }

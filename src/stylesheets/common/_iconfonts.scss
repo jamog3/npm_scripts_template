@@ -1,9 +1,9 @@
 @font-face {
     font-family: "icons";
-    src: url("../fonts/icons.eot?bc1f76a3cc61d056ac2a782cfe9bdb03?#iefix") format("embedded-opentype"),
-url("../fonts/icons.woff2?bc1f76a3cc61d056ac2a782cfe9bdb03") format("woff2"),
-url("../fonts/icons.woff?bc1f76a3cc61d056ac2a782cfe9bdb03") format("woff"),
-url("../fonts/icons.ttf?bc1f76a3cc61d056ac2a782cfe9bdb03") format("truetype");
+    src: url("../fonts/icons.eot?4c7b408d80bb84f2aa5c0797489e341f?#iefix") format("embedded-opentype"),
+url("../fonts/icons.woff2?4c7b408d80bb84f2aa5c0797489e341f") format("woff2"),
+url("../fonts/icons.woff?4c7b408d80bb84f2aa5c0797489e341f") format("woff"),
+url("../fonts/icons.ttf?4c7b408d80bb84f2aa5c0797489e341f") format("truetype");
 }
 
 i {
@@ -17,7 +17,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -30,41 +29,4 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 .icon-si-glyph-angle:before {
     content: "\f103";
-}
-
-@mixin iconfont($icon-si-glyph-anchor) {
-    content: "\f101";
-    font-family: "icons";
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.05;
-    text-indent: 0;
-    text-align: center;
-    speak: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-@mixin iconfont($icon-si-glyph-android) {
-    content: "\f102";
-    font-family: "icons";
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.05;
-    text-indent: 0;
-    text-align: center;
-    speak: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-@mixin iconfont($icon-si-glyph-angle) {
-    content: "\f103";
-    font-family: "icons";
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.05;
-    text-indent: 0;
-    text-align: center;
-    speak: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
