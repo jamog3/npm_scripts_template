@@ -1,5 +1,5 @@
-import { SmoothScroll } from './components/smoothscroll';
+import { SmoothScroll } from "./components/smoothscroll";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   SmoothScroll(0);
 });

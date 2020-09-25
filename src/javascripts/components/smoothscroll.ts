@@ -1,7 +1,9 @@
-import VanillaJsSmoothScroll from 'smooth-scroll';
+import VanillaJsSmoothScroll from "smooth-scroll";
 
-export const SmoothScroll = (y = 0) => {
-  const options: {} = {
+export const SmoothScroll = (y = 0): void => {
+  const options: {
+    [key: string]: string | number | boolean;
+  } = {
     selector: "[data-scroll]", // Note: スムーススクロールが有効なリンクに付ける属性
     // selectorHeader: "[data-scroll-header]", // Note: 固定ナビに付ける属性
     speed: 500, // Note: 到達するまでの総時間(ミリ秒)
@@ -15,4 +17,3 @@ export const SmoothScroll = (y = 0) => {
 };
 
 export default SmoothScroll;
-
