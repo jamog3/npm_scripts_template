@@ -55,7 +55,7 @@
     "watch": "npm-run-all --parallel watch:*",
     "watch:copy": "cross-var watch 'npm-run-all copy' $npm_package_config_src_copy",
     "watch:css": "cross-var watch 'npm-run-all --parallel css-scss css-lint --sequential css-postcss' $npm_package_config_src_css",
-    "watch:html": "cross-var watch 'npm-run-all --parallel html-pug html-lint' $npm_package_config_src_html",
+    "watch:html": "cross-var watch 'npm-run-all --parallel html-lint html-pug' $npm_package_config_src_html",
     "watch:img": "cross-var watch 'npm-run-all img-min' $npm_package_config_src_img",
     "watch:js": "cross-var watch 'npm-run-all --parallel js-lint js-rollup' $npm_package_config_src_js",
     "watch:server": "cross-var browser-sync start --server $npm_package_config_dist_root --files=$npm_package_config_dist_html'**/*.html',$npm_package_config_dist_css'**/*.css',$npm_package_config_dist_js'**/*.js' --startPath /",

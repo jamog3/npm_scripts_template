@@ -1,4 +1,5 @@
 {
+  "disallowClassLiteralsBeforeIdLiterals": true,
   "disallowHtmlText": true,
   "disallowMultipleLineBreaks": true,
   "disallowSpecificAttributes": [
