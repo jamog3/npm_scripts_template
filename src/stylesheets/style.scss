@@ -5,8 +5,10 @@
 @use 'common';
 @use 'components';
 
+// Note: 以下 サンプル
 @use 'common/variables/mixin';
 @use 'common/variables/size';
+@use 'common/sprites';
 
 .hoge {
   @include mixin.hover;
@@ -16,4 +18,8 @@
   @media screen and (max-width: size.$sp-width) {
     display: grid;
   }
+}
+
+.hoge3 {
+  @include sprites.sprite(sprites.$sample2);
 }
