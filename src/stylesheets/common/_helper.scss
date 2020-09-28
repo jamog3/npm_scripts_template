@@ -1,0 +1,15 @@
+@use 'common/variables/size';
+
+.sp-br {
+  display: inline !important;
+  @media screen and (min-width: size.$sp-width) {
+    display: none !important;
+  }
+}
+
+.sp-hide {
+  display: none !important;
+  @media screen and (min-width: size.$sp-width) {
+    display: inline !important;
+  }
+}

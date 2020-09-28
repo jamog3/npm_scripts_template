@@ -1,0 +1,13 @@
+//
+// Base
+// --------------------------------------------------
+
+@use 'common/variables/font';
+
+body {
+  font-family: font.$base-font-family;
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums;
+  letter-spacing: font.$letter-spacing;
+  line-height: 1.4;
+}

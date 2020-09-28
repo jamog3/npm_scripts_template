@@ -1,0 +1,27 @@
+@charset 'utf-8';
+
+@use 'bootstrap-reboot';
+
+@use 'common';
+@use 'components';
+
+// Note: 以下 サンプル
+@use 'common/variables/mixin';
+@use 'common/variables/size';
+@use 'common/sprites';
+
+.hoge {
+  @include mixin.hover;
+
+  background: #00f;
+  display: block;
+  @media screen and (max-width: size.$sp-width) {
+    display: grid;
+  }
+}
+
+.hoge3 {
+  @include sprites.sprite(sprites.$sample2);
+
+  color: #ddd;
+}

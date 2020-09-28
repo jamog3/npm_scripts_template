@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order"
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier"
+  ],
+  "ignoreFiles": [
+    "src/stylesheets/common/_iconfonts.scss"
+  ],
+  "rules": {
+    "indentation": 2,
+    "declaration-colon-newline-after": null,
+    "value-list-comma-newline-after": "never-multi-line",
+    "order/properties-alphabetical-order": true,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
+  }
+}
