@@ -15,15 +15,7 @@ $ yarn install
 `/.temp/` に一時ファイルが作成され、ブラウザが立ち上がる
 
 ```
-$ yarn start
-```
-
-## スプライト画像
-
-作成・更新は手動対応のため都度、下記のコマンドを実行
-
-```
-$ yarn run sprite
+$ yarn dev
 ```
 
 ## アイコンフォント
@@ -64,13 +56,12 @@ $ yarn run build
 srcを編集
 
 + pug  -> html
-+ sass -> css
-+ es6  -> js
++ scss -> css
++ ts  -> js
 
 ```
 ├── .temp/（ビルド後のソース）
 │   ├── assets/javascripts/
-│   │    │      └── libs/ （browserifyしないjsはここに生成）
 │   │    ├── images
 │   │    └── stylesheets 等
 │   └── index.html
@@ -97,12 +88,11 @@ srcを編集
 │   ├── javascripts/
 │   │    └── common.js
 │   └── stylesheets/
-│         ├── _partial/ （共通パーツのcss）
+│         ├── common/ （共通パーツのcss）
 │         └── common.sass
 │
 ├── .git/
 ├── .gitignore
-├── gulpfile.js
 ├── package.json
 └── README.md
 ```

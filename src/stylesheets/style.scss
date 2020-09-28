@@ -8,7 +8,6 @@
 // Note: 以下 サンプル
 @use 'common/variables/mixin';
 @use 'common/variables/size';
-@use 'common/sprites';
 
 .hoge {
   @include mixin.hover;
@@ -21,7 +20,5 @@
 }
 
 .hoge3 {
-  @include sprites.sprite(sprites.$sample2);
-
   color: #ddd;
 }
