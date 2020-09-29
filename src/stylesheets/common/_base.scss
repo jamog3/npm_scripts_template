@@ -5,7 +5,7 @@
 @use 'common/variables/font';
 
 body {
-  font-family: font.$base-font-family;
+  font-family: font.$base-family;
   font-feature-settings: 'tnum';
   font-variant-numeric: tabular-nums;
   letter-spacing: font.$letter-spacing;

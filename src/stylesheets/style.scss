@@ -1,11 +1,13 @@
 @charset 'utf-8';
 
-@use 'bootstrap-reboot';
+// Note: /node_modules/modern-css-reset/dist/
+@use 'reset.min';
 
 @use 'common';
 @use 'components';
 
 // Note: 以下 サンプル
+@use 'common/variables/font';
 @use 'common/variables/mixin';
 @use 'common/variables/size';
 
@@ -21,4 +23,5 @@
 
 .hoge3 {
   color: #ddd;
+  font-size: font.size(16);
 }
