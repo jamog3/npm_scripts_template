@@ -2,8 +2,10 @@
 // Variables - font
 // --------------------------------------------------
 
-$base-family: -apple-system, blinkmacsystemfont, 'Helvetica Neue', yugothic, 'ヒラギノ角ゴ ProN W3', hiragino kaku gothic pron, arial, 'メイリオ', meiryo, sans-serif;
-$letter-spacing: .15em;
+$base-family: -apple-system, blinkmacsystemfont, "Helvetica Neue", yugothic,
+  "ヒラギノ角ゴ ProN W3", hiragino kaku gothic pron, arial, "メイリオ", meiryo,
+  sans-serif;
+$letter-spacing: 0.15em;
 
 // Note: font-size: font.size(12); = 12px
 @function size($size) {

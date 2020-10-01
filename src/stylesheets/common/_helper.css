@@ -1,5 +1,3 @@
-@use 'common/variables/size';
-
 .sp-br {
   display: inline !important;
   @media screen and (min-width: size.$sp-width) {

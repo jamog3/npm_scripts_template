@@ -1,17 +1,16 @@
-@charset 'utf-8';
+@import "/common/_initial";
 
-// Note: /node_modules/modern-css-reset/dist/
-@use 'reset.min';
+/* @import "/common/_index";
 
-@use 'common';
-@use 'components';
+@import '/components/_index'; */
 
-// Note: 以下 サンプル
+/* // Note: 以下 サンプル
+
 @use 'common/variables/font';
 @use 'common/variables/mixin';
-@use 'common/variables/size';
+@use 'common/variables/size'; */
 
-.hoge {
+/* .hoge {
   @include mixin.hover;
 
   background: #00f;
@@ -24,4 +23,10 @@
 .hoge3 {
   color: #ddd;
   font-size: font.size(16);
+} */
+
+.hoge {
+  display: grid;
+  font-size: 10px;
+  font-weight: bold;
 }

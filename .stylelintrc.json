@@ -1,20 +1,23 @@
 {
   "plugins": [
-    "stylelint-scss"
+    "stylelint-order",
+    "stylelint-prettier"
   ],
   "extends": [
     "stylelint-config-standard",
+    "stylelint-prettier/recommended",
     "stylelint-config-prettier",
     "stylelint-config-property-sort-order-smacss"
   ],
   "ignoreFiles": [
-    "src/stylesheets/common/_iconfonts.scss"
+    "node_modules/**/*",
+    "src/stylesheets/common/_iconfonts.css"
   ],
   "rules": {
     "indentation": 2,
     "declaration-colon-newline-after": null,
     "value-list-comma-newline-after": "never-multi-line",
     "at-rule-no-unknown": null,
-    "scss/at-rule-no-unknown": true
+    "prettier/prettier": true
   }
 }
