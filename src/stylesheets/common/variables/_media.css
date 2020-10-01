@@ -1,0 +1,6 @@
+/* Variables - media
+ * ========================================================================== */
+
+@custom-media --media-mobile (max-width: 480px);
+@custom-media --media-tablet (min-width: 768px);
+@custom-media --media-pc (min-width: 1024px);
