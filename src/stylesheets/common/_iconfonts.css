@@ -1,0 +1,36 @@
+/* stylelint-disable */
+
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.eot?9b9fd67e460f921c31b942fa31e96093?#iefix") format("embedded-opentype"),
+url("../fonts/icons.woff2?9b9fd67e460f921c31b942fa31e96093") format("woff2"),
+url("../fonts/icons.woff?9b9fd67e460f921c31b942fa31e96093") format("woff"),
+url("../fonts/icons.ttf?9b9fd67e460f921c31b942fa31e96093") format("truetype");
+}
+
+i {
+  line-height: 1;
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+  font-family: icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-si-glyph-anchor:before {
+  content: "\f101";
+}
+.icon-si-glyph-android:before {
+  content: "\f102";
+}
+.icon-si-glyph-angle:before {
+  content: "\f103";
+}
+
+/* stylelint-enable */

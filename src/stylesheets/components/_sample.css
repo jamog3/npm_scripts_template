@@ -1,9 +1,9 @@
 .sample {
   display: block;
-  &__body {
-    background: #aac;
+  &.body {
     display: flex;
-    font-size: 10px;
     padding: 100px;
+    background: #aac;
+    font-size: 10px;
   }
 }

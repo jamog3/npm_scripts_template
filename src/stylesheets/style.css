@@ -1,0 +1,30 @@
+@import "/common/_initial";
+@import "/common/variables/_index";
+@import "/common/_index";
+@import '/components/_index';
+
+/* Note: 以下 サンプル */
+
+.hoge {
+  display: block;
+  background: #00f;
+  @media screen and (--media-pc) {
+    display: grid;
+  }
+}
+
+.hoge3 {
+  color: #ddd;
+  font-size: rem(16px);
+}
+
+.hoge4 {
+  display: grid;
+  width: var(--width-min);
+  transition: margin-right 2s var(--animation-md) 0.5s;
+  font-size: 10px;
+  font-weight: bold;
+  @media screen and (--media-pc) {
+    display: flex;
+  }
+}
