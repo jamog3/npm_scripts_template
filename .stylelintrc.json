@@ -10,15 +10,19 @@
     "stylelint-config-property-sort-order-smacss"
   ],
   "ignoreFiles": [
-    "node_modules/**/*",
-    "src/stylesheets/common/_iconfonts.css"
+    "node_modules/**/*"
   ],
   "rules": {
     "indentation": 2,
     "comment-empty-line-before": "never",
     "declaration-no-important": true,
     "value-list-comma-newline-after": "never-multi-line",
-    "at-rule-no-unknown": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["custom-media", "import-normalize"]
+      }
+    ],
     "prettier/prettier": true
   }
 }

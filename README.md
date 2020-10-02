@@ -55,9 +55,9 @@ $ yarn run build
 
 srcを編集
 
-+ pug  -> html
-+ scss -> css
-+ ts  -> js
++ pug -> html
++ PostCSS -> css
++ ts -> js
 
 ```
 ├── .temp/（ビルド後のソース）

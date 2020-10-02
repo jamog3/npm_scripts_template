@@ -1,25 +1,29 @@
+/* stylelint-disable */
+
 @font-face {
-    font-family: "{{ fontName }}";
-    src: {{{ src }}};
+  font-family: "{{ fontName }}";
+  src: {{{ src }}};
 }
 
 {{ baseTag }} {
-    line-height: 1;
+  line-height: 1;
 }
 
 {{ baseTag }}[class^="{{classPrefix}}"]:before, {{ baseTag }}[class*=" {{classPrefix}}"]:before {
-    font-family: {{ fontName }} !important;
-    font-style: normal;
-    font-weight: normal !important;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: {{ fontName }} !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 {{# each codepoints }}
 .{{ ../classPrefix }}{{ @key }}:before {
-    content: "\\{{ this }}";
+  content: "\\{{ this }}";
 }
 {{/ each }}
+
+/* stylelint-enable */

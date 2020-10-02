@@ -1,7 +1,8 @@
 @import "/common/_initial";
 @import "/common/variables/_index";
 @import "/common/_index";
-/* @import '/components/_index'; */
+@import '/components/_index';
+
 /* Note: 以下 サンプル */
 /* @include mixin.hover; */
 

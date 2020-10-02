@@ -1,6 +1,6 @@
-/* Variables - animation
+/* Variables - transition
  * ========================================================================== */
 
 :root {
-  --animation-md: cubic-bezier(0.55, 0, 0.1, 1);
+  --transition-md: cubic-bezier(0.55, 0, 0.1, 1);
 }

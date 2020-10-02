@@ -1,6 +1,6 @@
 .sample {
   display: block;
-  &__body {
+  &.body {
     display: flex;
     padding: 100px;
     background: #aac;

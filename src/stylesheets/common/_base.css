@@ -2,9 +2,10 @@
  * ========================================================================== */
 
 body {
+  margin: 0;
   font-family: var(--font-base-family);
-  font-feature-settings: "palt" 1;
-  font-variant-numeric: tabular-nums;
   letter-spacing: var(--font-letter-spacing);
   line-height: 1.4;
+  font-feature-settings: "palt" 1;
+  font-variant-numeric: tabular-nums;
 }

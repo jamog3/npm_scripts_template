@@ -1,9 +1,8 @@
 /* Variables
  * ========================================================================== */
 
-@import "_animation";
 @import "_color";
 @import "_font";
 @import "_media";
 @import "_size";
-/* @import "mixin"; */
+@import "_transition";
