@@ -1,6 +1,7 @@
 module.exports = {
   plugins: [
     require('postcss-import'),
+    require('postcss-rem'),
     require('stylelint'),
     require('postcss-normalize'),
     require('postcss-preset-env')({
@@ -10,12 +11,13 @@ module.exports = {
       stage: 1,
     }),
     require('postcss-sort-media-queries')({ sort: 'mobile-first' }),
-    require('cssnano')({
-      autoprefixer: {
-        add: false,
-      },
-      preset: 'advanced',
-    }),
+    process.env.NODE_ENV === 'production' &&
+      require('cssnano')({
+        autoprefixer: {
+          add: false,
+        },
+        preset: 'advanced',
+      }),
     require('postcss-reporter')({
       clearReportedMessages: true,
       throwError: false,
