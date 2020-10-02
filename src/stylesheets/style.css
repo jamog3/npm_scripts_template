@@ -4,7 +4,6 @@
 @import '/components/_index';
 
 /* Note: 以下 サンプル */
-/* @include mixin.hover; */
 
 .hoge {
   display: block;
@@ -21,6 +20,7 @@
 
 .hoge4 {
   display: grid;
+  width: var(--width-min);
   transition: margin-right 2s var(--animation-md) 0.5s;
   font-size: 10px;
   font-weight: bold;

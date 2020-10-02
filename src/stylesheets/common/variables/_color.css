@@ -7,3 +7,7 @@
   --color-link-text: #009ff1;
   --color-hover-text: #fff;
 }
+
+:root {
+  --color-hover: 0.75;
+}
