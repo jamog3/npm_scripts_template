@@ -71,10 +71,9 @@ html(lang="ja")
     link(rel="icon", type="image/png", href=`${depth}assets/images/favicon.png`, sizes="32x32")
 
   body
-    .wrapper#app
-
-      include /_templates/_header
-
-      block content
+    #app
+      .wrapper#top
+        include /_templates/_header
+        block content
 
     script(src=`${depth}assets/javascripts/common.js?${dateNow}`)

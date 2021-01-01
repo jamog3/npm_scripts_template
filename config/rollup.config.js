@@ -10,7 +10,7 @@ export default {
   input: ['src/javascripts/*.ts'],
   output: {
     dir: '.temp/assets/',
-    format: 'es',
+    format: 'umd',
     entryFileNames: '[name].js',
     sourcemap: true,
   },

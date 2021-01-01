@@ -8,14 +8,50 @@ block vars
   - var filePath     = "/" //- 必須。詳しくはreadmeを参照
 
 block content
-  | {{ text }}
-  h2#top.hoge ほげほげ2
+  .menu(:class="{ 'is-show': state.isShowMenu }") menu {{ state.isShowMenu }}
+  button(@click="toggleMenu") menu toggle
+  h2.hoge ほげほげ2
   #hoge.hoge2 ほげほげ3
     .hoge2__image-wrapper
       img(src=`${depth}assets/images/sprites.png`, alt="hoge").hoge2__image
-  h4.hoge3
-    i.icon-si-glyph-anchor
-    | ほげほげ4
+  details
+    summary hoge
+    transition(name="fade")
+      p fuga
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
+  br
   .sample
     .sample__body
-      a(href="#top", data-scroll).sample__link top
+      a(href="#top", v-smooth-scroll).sample__link top
+      a(href="#hoge", v-smooth-scroll).sample__link hoge

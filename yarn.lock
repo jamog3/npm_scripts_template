@@ -9901,6 +9901,11 @@ void-elements@^3.1.0:
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-3.1.0.tgz#614f7fbf8d801f0bb5f0661f5b2f5785750e4f09"
   integrity sha1-YU9/v42AHwu18GYfWy9XhXUOTwk=
 
+vue3-smooth-scroll@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/vue3-smooth-scroll/-/vue3-smooth-scroll-0.8.0.tgz#9b33ba146c9e5897a41f6344c0f0c5e82c5f6350"
+  integrity sha512-YVS5Mwa9tQtV95FqIshDvny6Y3nevZETDvWcpTFMLrhLhVWwZpJD+yM/T0HLOFBsbqCE1FC8OIvog9tX38VsuA==
+
 vue@3.0.5:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.0.5.tgz#de1b82eba24abfe71e0970fc9b8d4b2babdc3fe1"
