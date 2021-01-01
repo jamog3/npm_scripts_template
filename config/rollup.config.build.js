@@ -7,7 +7,7 @@ export default {
   input: 'src/javascripts/common.ts',
   output: {
     dir: 'build/assets/javascripts/',
-    format: 'iife',
+    format: 'es',
     entryFileNames: '[name].js',
     sourcemap: false,
     plugins: [terser()],

@@ -1,5 +1,10 @@
-import { SmoothScroll } from './components/smoothscroll';
+import { createApp, ref } from 'vue';
 
-document.addEventListener('DOMContentLoaded', () => {
-  SmoothScroll(0);
-});
+createApp({
+  setup() {
+    const message = ref('Hello World');
+    return {
+      text: message,
+    };
+  },
+}).mount('#app');
