@@ -75,7 +75,8 @@
     "build:js": "npm-run-all --sequential js-lint js-rollup-build"
   },
   "dependencies": {
-    "smooth-scroll": "^16.1.3"
+    "smooth-scroll": "^16.1.3",
+    "what-input": "^5.2.10"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.1",

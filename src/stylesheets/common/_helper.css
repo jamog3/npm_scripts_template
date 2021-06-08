@@ -13,4 +13,15 @@
     display: inline !important;
   }
 }
+
+[v-cloak] {
+  display: none;
+}
+
+[data-whatintent="mouse"],
+[data-whatintent="touch"] {
+  *:focus {
+    outline: none;
+  }
+}
 /* stylelint-enable declaration-no-important */
