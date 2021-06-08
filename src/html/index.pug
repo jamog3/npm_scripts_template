@@ -8,7 +8,7 @@ block vars
   - var filePath     = "/" //- 必須。詳しくはreadmeを参照
 
 block content
-  .menu(:class="{ 'is-show': state.isShowMenu }") menu {{ state.isShowMenu }}
+  .menu(:class="{ 'is-show': state.isShowMenu }", v-cloak) menu {{ state.isShowMenu }}
   button(@click="toggleMenu") menu toggle
   h2.hoge ほげほげ2
   #hoge.hoge2 ほげほげ3

@@ -1,5 +1,6 @@
 import { createApp, reactive } from 'vue';
 import VueSmoothScroll from 'vue3-smooth-scroll';
+import 'what-input';
 
 const app = createApp({
   setup() {
