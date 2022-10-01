@@ -39,3 +39,14 @@
     display: flex;
   }
 }
+
+.hoge6 {
+  display: grid;
+  width: var(--width-min);
+  transition: margin-right 2s var(--animation-md) 0.5s;
+  font-size: 10px;
+  font-weight: bold;
+  @media screen and (--media-pc) {
+    display: flex;
+  }
+}
