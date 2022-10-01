@@ -37,14 +37,13 @@
     }
   },
   "lint-staged": {
-    "*.css": [
-      "npm run css-lint-fix"
-    ]
+    "*.{js,ts}": "yarn js-lint --fix --ignore-path .gitignore",
+    "*.css": "yarn css-lint-fix"
   },
   "prettier": {},
   "scripts": {
-    "start": "npm run dev",
-    "dev": "rimraf $npm_package_config_dist_root && npm run watch",
+    "start": "yarn run dev",
+    "dev": "rimraf $npm_package_config_dist_root && yarn run watch",
     "build": "rimraf $npm_package_config_build_root && NODE_ENV=production npm-run-all build:*",
     "copy": "cross-var cpx $npm_package_config_src_copy'**/*' $npm_package_config_dist_root",
     "copy-build": "cross-var cpx $npm_package_config_src_copy'**/*' $npm_package_config_build_root",
@@ -61,16 +60,16 @@
     "js-rollup": "rollup --config config/rollup.config.js",
     "js-rollup-build": "rollup --config config/rollup.config.build.js",
     "watch": "npm-run-all --parallel watch:*",
-    "watch:copy": "cross-var chokidar --initial $npm_package_config_src_copy'**/*' -c 'npm run copy'",
-    "watch:css": "cross-var chokidar --initial $npm_package_config_src_css'**/*.css' -c 'npm run css-postcss'",
+    "watch:copy": "cross-var chokidar --initial $npm_package_config_src_copy'**/*' -c 'yarn run copy'",
+    "watch:css": "cross-var chokidar --initial $npm_package_config_src_css'**/*.css' -c 'yarn run css-postcss'",
     "watch:html": "cross-var chokidar --initial $npm_package_config_src_html'**/*.pug' -c 'npm-run-all --parallel html-lint html-pug'",
-    "watch:img": "cross-var chokidar --initial $npm_package_config_src_img'**/*' -c  'npm run img-min'",
+    "watch:img": "cross-var chokidar --initial $npm_package_config_src_img'**/*' -c  'yarn run img-min'",
     "watch:js": "cross-var chokidar --initial $npm_package_config_src_js -c 'npm-run-all --parallel js-lint js-rollup'",
     "watch:server": "cross-var browser-sync start --server $npm_package_config_dist_root --files=$npm_package_config_dist_html'**/*.html',$npm_package_config_dist_css'**/*.css',$npm_package_config_dist_js'**/*.js' --startPath /",
-    "build:copy": "npm run copy-build",
+    "build:copy": "yarn run copy-build",
     "build:css": "npm-run-all --sequential css-lint-fix css-postcss-build",
     "build:html": "npm-run-all --sequential html-lint html-pug-build",
-    "build:img": "npm run img-min-build",
+    "build:img": "yarn run img-min-build",
     "build:js": "npm-run-all --sequential js-lint js-rollup-build"
   },
   "dependencies": {

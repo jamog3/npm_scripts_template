@@ -1,5 +1,6 @@
 .sample {
   display: block;
+
   &.body {
     display: flex;
     padding: 100px;
