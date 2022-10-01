@@ -1,8 +1,7 @@
 @import "/common/_initial";
 @import "/common/variables/_index";
 @import "/common/_index";
-@import '/components/_index';
-
+@import "/components/_index";
 /* Note: 以下 サンプル */
 
 .hoge {
@@ -14,6 +13,7 @@
 }
 
 .hoge3 {
+  padding: rem(16px);
   color: #ddd;
   font-size: rem(16px);
 }
