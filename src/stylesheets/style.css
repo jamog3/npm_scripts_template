@@ -13,11 +13,34 @@
 }
 
 .hoge3 {
+  padding: rem(16px);
   color: #ddd;
   font-size: rem(16px);
 }
 
 .hoge4 {
+  display: grid;
+  width: var(--width-min);
+  transition: margin-right 2s var(--animation-md) 0.5s;
+  font-size: 10px;
+  font-weight: bold;
+  @media screen and (--media-pc) {
+    display: flex;
+  }
+}
+
+.hoge5 {
+  display: grid;
+  width: var(--width-min);
+  transition: margin-right 2s var(--animation-md) 0.5s;
+  font-size: 10px;
+  font-weight: bold;
+  @media screen and (--media-pc) {
+    display: flex;
+  }
+}
+
+.hoge6 {
   display: grid;
   width: var(--width-min);
   transition: margin-right 2s var(--animation-md) 0.5s;

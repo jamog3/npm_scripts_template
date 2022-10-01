@@ -1,9 +1,8 @@
 module.exports = {
   plugins: [
+    require('stylelint'),
     require('postcss-import'),
     require('postcss-rem'),
-    require('stylelint'),
-    require('postcss-normalize'),
     require('postcss-preset-env')({
       autoprefixer: {
         grid: 'autoplace',

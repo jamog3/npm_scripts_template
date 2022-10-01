@@ -9,3 +9,12 @@ body {
   font-feature-settings: "palt" 1;
   font-variant-numeric: tabular-nums;
 }
+
+*:focus {
+  outline: auto;
+}
+
+[data-whatinput="mouse"] *:focus,
+[data-whatinput="touch"] *:focus {
+  outline: none;
+}

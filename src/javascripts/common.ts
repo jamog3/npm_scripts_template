@@ -1,30 +1,8 @@
-import { createApp, reactive } from 'vue';
-import VueSmoothScroll from 'vue3-smooth-scroll';
-import 'what-input';
+import whatInput from 'what-input';
+import { SmoothScroll } from './components/smoothscroll';
 
-const app = createApp({
-  setup() {
-    // data
-    const state = reactive({
-      isShowMenu: false,
-    });
+whatInput;
 
-    // method
-    const toggleMenu = (): void => {
-      state.isShowMenu = !state.isShowMenu;
-    };
-
-    return {
-      state,
-      toggleMenu,
-    };
-  },
+document.addEventListener('DOMContentLoaded', () => {
+  SmoothScroll(0);
 });
-
-app.use(VueSmoothScroll, {
-  duration: 300,
-  updateHistory: false,
-  easingFunction: 'easeInOutQuint',
-});
-
-app.mount('#app');
