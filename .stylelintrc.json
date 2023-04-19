@@ -13,10 +13,8 @@
     "node_modules/**/*.css"
   ],
   "rules": {
-    "indentation": 2,
     "comment-empty-line-before": "never",
     "declaration-no-important": true,
-    "value-list-comma-newline-after": "never-multi-line",
     "at-rule-no-unknown": [
       true,
       {

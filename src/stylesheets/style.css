@@ -1,7 +1,7 @@
-@import "/common/_initial";
-@import "/common/variables/_index";
-@import "/common/_index";
-@import "/components/_index";
+@import url("/common/_initial");
+@import url("/common/variables/_index");
+@import url("/common/_index");
+@import url("/components/_index");
 /* Note: 以下 サンプル */
 
 .hoge {
